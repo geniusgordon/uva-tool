@@ -33,6 +33,8 @@ def login():
         s = requests.Session()
         data = get_data()
         r = s.post(url, data=data)
+        if 'Logout' not in r.content:
+            raise Exception('Login failed')
         print('Log in success')
         save_session(s)
     return s
