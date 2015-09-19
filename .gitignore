@@ -1,3 +1,7 @@
 *.pyc
 *.html
+*.cpp
+a.out
 session
+codes
+downloads

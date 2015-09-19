@@ -5,7 +5,7 @@ from login import login
 def submit(s, pid, filename=None):
     url = config.get('url', 'submit')
     if not filename:
-        filename = pid + '.cpp'
+        filename = 'codes/%s.cpp' % pid
     with open(filename, 'r') as f:
         code = f.read()
     headers = {
